@@ -1,0 +1,5 @@
+source("loadData.r")
+plot(x=data$dateTime,y=data$Sub_metering_1,type="l",ylab="Energy sub metering",xlab="",lwd=2.5)
+lines(data$dateTime,data$Sub_metering_2,col="red", lwd=2.5,type="l")
+lines(data$dateTime,data$Sub_metering_3,col="blue",lwd=2.5,type="l")
+legend("topright",  col = c("black","red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"),lty=c(1,1,1),lwd=c(1,1,1))
